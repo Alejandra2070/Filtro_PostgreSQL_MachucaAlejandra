@@ -11,8 +11,6 @@ begin
 		raise exception 'El producto con id % no existe.', product_id;
 	end if;
 
-	select id_cliente into
-
 	if cant_stock < cantidad_venta then
 		raise exception 'No hay stock suficiente';
 	end if;
@@ -24,4 +22,4 @@ begin
 end;
 $$;
 
-call procedure registrar_venta()
+call procedure registrar_venta();
